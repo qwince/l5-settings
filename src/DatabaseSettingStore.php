@@ -19,7 +19,7 @@ class DatabaseSettingStore extends SettingStore
 	 * @return mixed
 	 */
 	public function get($key, $default = null){
-		$setting = SettingModel::withKey($key)->first()
+		$setting = SettingModel::withKey($key)->first();
 		return $setting ? $setting->value : $default;
 	}
 
