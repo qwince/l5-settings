@@ -1,16 +1,15 @@
 <?php
 return array(
-	// which type of store to use.
-	// valid options: 'json', 'database'
-	//'store' => 'json',
 
-	// if the json store is used, give the full path to the .json file
-	// that the store writes to.
-	//'path' => storage_path().'/settings.json',
-
-	// If the database store is used, you can set which connection to use. if
-	// set to null, the default connection will be used.
-	//'connection' => null,
+    /*
+    |--------------------------------------------------------------------------
+    | Table name
+    |--------------------------------------------------------------------------
+    |
+    | This is the name given to the settings table
+    |
+    */
+    'table_name' => 'settings',
 
 	/*
     |--------------------------------------------------------------------------
