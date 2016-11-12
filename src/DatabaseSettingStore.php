@@ -31,7 +31,7 @@ class DatabaseSettingStore extends SettingStore
 	 * @return boolean
 	 */
 	public function has($key){
-		SettingModel::withKey($key)->active()->first();
+		return SettingModel::withKey($key)->active()->first();
 	}
 
 	/**
