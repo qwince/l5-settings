@@ -8,6 +8,8 @@
  */
 namespace qwince\LaravelSettings;
 use Illuminate\Database\Connection;
+use InvalidArgumentException;
+
 class DatabaseSettingStore extends SettingStore
 {
 	/**
@@ -60,7 +62,7 @@ class DatabaseSettingStore extends SettingStore
 			$setting->save();
 		}
 		else{
-			//TODO trow exception
+			throw new InvalidArgumentException();
 		}
 	}
 
@@ -76,7 +78,7 @@ class DatabaseSettingStore extends SettingStore
 			$setting->save();
 		}
 		else{
-			//TODO trow exception
+			throw new InvalidArgumentException();
 		}
 	}
 

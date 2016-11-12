@@ -42,5 +42,33 @@ trait SettingsUserTrait
     	$setting = $this->getSetting($key);
     	if ($setting)
     		$setting->delete();
+    	else
+    		throw new InvalidArgumentException();
+    }
+
+    public function has(String $key){
+    	return $this->settings()->withKey($key)->active()->first() ? true : false;
+    }
+
+    public function activate(String $key){
+    	$setting = $this->getSetting($key);
+    	if ($setting){
+    		$setting->active = true;
+    		$setting->save();
+    	}
+    	else{
+    		throw new InvalidArgumentException();
+    	}
+    }
+
+    public function deactivate(String $key){
+    	$setting = $this->getSetting($key);
+    	if ($setting){
+    		$setting->active = false;
+    		$setting->save();
+    	}
+    	else{
+    		throw new InvalidArgumentException();
+    	}
     }
 }
