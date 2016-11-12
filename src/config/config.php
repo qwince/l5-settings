@@ -1,17 +1,5 @@
 <?php
-return array(
-	// which type of store to use.
-	// valid options: 'json', 'database'
-	//'store' => 'json',
-
-	// if the json store is used, give the full path to the .json file
-	// that the store writes to.
-	//'path' => storage_path().'/settings.json',
-
-	// If the database store is used, you can set which connection to use. if
-	// set to null, the default connection will be used.
-	//'connection' => null,
-
+return [
 	/*
     |--------------------------------------------------------------------------
     | Application User Model
@@ -32,4 +20,26 @@ return array(
     |
     */
     'users_table' => 'users',
-);
+
+    /*
+    |--------------------------------------------------------------------------
+    | Settings Table
+    |--------------------------------------------------------------------------
+    |
+    | This is the name of the settings table used by the application to save settings to the
+    | database.
+    |
+    */
+    'table' => 'settings',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Settings Model
+    |--------------------------------------------------------------------------
+    |
+    | This is the Setting model used by Settings to create correct relations.
+    | Update the User if it is in a different namespace.
+    |
+    */
+    'settings_model' => 'App\Setting',
+];

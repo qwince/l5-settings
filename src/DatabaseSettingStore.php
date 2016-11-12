@@ -2,7 +2,7 @@
 /**
  * Laravel 5 - Persistent Settings
  *
- * @author   Gianluca Di Gesaro <gianlucadigesaro@gmail.com>
+ * @author   Gianluca Di Gesaro gianluca@qwince.com>
  * @license  http://opensource.org/licenses/MIT
  * @package  l5-settings
  */
@@ -19,7 +19,8 @@ class DatabaseSettingStore extends SettingStore
 	 * @return mixed
 	 */
 	public function get($key, $default = null){
-		return $setting = SettingModel::withKey($key)->first() ? $setting->value : $default;
+		$setting = SettingModel::withKey($key)->first();
+		return $setting ? $setting->value : $default;
 	}
 
 	/**
