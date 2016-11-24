@@ -7,7 +7,7 @@ Persistent, application-wide settings for Laravel.
 
 1. `composer require qwince/l5-settings:dev-master`
 2. Add `qwince\LaravelSettings\SettingsServiceProvider::class` to the array of providers in `config/app.php`.
-3. Publish config file and migration by running `php artisan vendor:publish`. 
+3. Publish config file and migration by running `php artisan vendor:publish -provider="qwince\LaravelSettings\SettingsServiceProvider"`. 
 4. Optional: add `'Setting' => qwince\LaravelSettings\SettingsFacade::class` to the array of aliases in `config/app.php`.
 
 ## Usage
