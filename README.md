@@ -12,7 +12,7 @@ Persistent, application-wide settings for Laravel.
 
 ## Usage
 
-####Global settings
+### Global settings
 You can either access the setting store via its facade or inject it by type-hinting towards the abstract class `qwince\LaravelSettings\SettingStore`.
 
 ```php
@@ -23,7 +23,7 @@ Setting::forget('foo');
 $settings = Setting::all();
 ?>
 ```
-####User settings
+### User settings
 Create a Setting model app/Setting.php using the following example:
 ```php
 <?php namespace App;
